@@ -138,7 +138,7 @@ public class userDB {
             var statement = connection.createStatement();
             statement.setQueryTimeout(timeout);
 //            System.out.println("Adding User: " + user + ", Password: " + password);
-            statement.executeUpdate("insert into " + dataBaseTableName + " (name, password) values('" + user + "','" + generateSecurePassword(password) + "')");
+            statement.executeUpdate("insert into " + dataBaseTableName + " (username, password) values('" + user + "','" + generateSecurePassword(password) + "')");
         } catch (Exception ex) {
             Logger.getLogger(userDB.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
