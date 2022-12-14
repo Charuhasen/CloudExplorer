@@ -20,7 +20,8 @@ public class App extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("primary.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root,640,480);
+            Scene scene = new Scene(root, 800, 580);
+            secondaryStage.setResizable(false);
             secondaryStage.setScene(scene);
             secondaryStage.setTitle("Cloud Explorer");
             secondaryStage.show();
